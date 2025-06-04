@@ -36,8 +36,9 @@ public class moveAndShoot : MonoBehaviour
     //slider
     public Slider Slider1;
     private int maxVal1;
-
     private float timeCount2 = 5;
+    //laserMouth
+    public GameObject laserMouth;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -83,7 +84,12 @@ public class moveAndShoot : MonoBehaviour
     }
 
 
-
+    public IEnumerator spawnLazerMouth()
+    {   
+        Instantiate(laserMouth,new Vector2(0, 0), Quaternion.identity);
+        yield return new WaitForSeconds(2);
+        
+    }
     public IEnumerator falltimer()
     {   
         GetComponent<BoxCollider2D>().enabled = false;  
@@ -109,13 +115,15 @@ public class moveAndShoot : MonoBehaviour
         if (timeCount1 < 0) { 
             spawnEnem();
             timeCount1 = 3;
+            StartCoroutine(spawnLazerMouth());
         }
 
         timeCount2 -= Time.deltaTime;
         if (timeCount2 < 0)
         {
             spawnEnem2();
-            timeCount2 = 5;
+            timeCount2 = 2;
+       
         }
         //fliping
         moveX = Input.GetAxisRaw("Horizontal");

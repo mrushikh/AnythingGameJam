@@ -140,7 +140,7 @@ public class enemyPatrol : MonoBehaviour
         if (collision.CompareTag("EnemyEye"))
         {
             int rand = Random.Range(0, 4);
-            if (rand<1)
+            if (rand<2)
             {
                 StartCoroutine(letPass1(2));
             }else
