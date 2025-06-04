@@ -183,7 +183,7 @@ public class moveAndShoot : MonoBehaviour
         {
             StartCoroutine(damage(10));
         }
-        Debug.Log(healthInt);
+        //Debug.Log(healthInt);
     }
     
     private void OnCollisionExit2D(Collision2D collision)

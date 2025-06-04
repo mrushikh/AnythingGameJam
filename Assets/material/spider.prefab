@@ -235,7 +235,7 @@ MonoBehaviour:
   speed: 3
   laser2: {fileID: 6907972379834734373, guid: d32c6c236fd30ed418fc509e0e59f919, type: 3}
   statPoint: {fileID: 9099518441292247634}
-  health: 20
+  health: 10
   parent: {fileID: 3632215659527725336}
 --- !u!50 &7348990948252151828
 Rigidbody2D:

@@ -21,7 +21,7 @@ public class bulletScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rot1 + 90);
 
     }
-
+    
     // Update is called once per frame
     void Update()
     {

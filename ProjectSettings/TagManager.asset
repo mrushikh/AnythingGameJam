@@ -13,6 +13,7 @@ TagManager:
   - laser2
   - ground
   - SpiderEnemy
+  - Boss
   layers:
   - Default
   - TransparentFX
