@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
+using FMODUnity;
+using FMOD.Studio;
 
 public class moveAndShoot : MonoBehaviour
 {
