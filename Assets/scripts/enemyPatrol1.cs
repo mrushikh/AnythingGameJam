@@ -128,12 +128,12 @@ public class enemyPatrol1 : MonoBehaviour
        
         if (collision.CompareTag("SpiderEnemy"))
         {
-            int rand = Random.Range(0, 2);
-            if (rand == 0)
+            int rand = Random.Range(0, 4);
+            if (rand <1)
             {
                 StartCoroutine(letPass(2));
             }
-            else if (rand == 1)
+            else 
             {
                 if (collision.gameObject != null)
                 {

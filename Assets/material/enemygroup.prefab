@@ -286,6 +286,7 @@ MonoBehaviour:
   laser: {fileID: 1384831303169254423, guid: f0eb29356d518ca4993ee0dabda95435, type: 3}
   startPoint: {fileID: 5691463265810418499}
   health: 30
+  parent1: {fileID: 7200493342834518733}
 --- !u!61 &3461218588953588447
 BoxCollider2D:
   m_ObjectHideFlags: 0
