@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class bossScript : MonoBehaviour
 {
     public int health;
-    public Slider Slider;
+    public Slider Slider2;
     private float maxVal;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,9 +21,9 @@ public class bossScript : MonoBehaviour
     public void  healthbar(float currentValue,float maxValue)
     {
         if (health==0) {
-            Slider.fillRect.gameObject.SetActive(false);
+            Slider2.fillRect.gameObject.SetActive(false);
         }
-        Slider.value = currentValue/maxValue;
+        Slider2.value = currentValue/maxValue;
         
     }
     // Update is called once per frame

@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
+using Slider = UnityEngine.UI.Slider;
 
 public class moveAndShoot : MonoBehaviour
 {
@@ -31,16 +33,27 @@ public class moveAndShoot : MonoBehaviour
     //spiderSpawn
     public GameObject enemySpawner2;
     public GameObject enemySpawner3;
-    
+    //slider
+    public Slider Slider1;
+    private int maxVal1;
+
     private float timeCount2 = 5;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         OnGround = true;
-        
+        maxVal1=healthInt;
 
     }
+    public void healthbar1(float currentValue, float maxValue)
+    {
+        if (healthInt == 0)
+        {
+            Slider1.fillRect.gameObject.SetActive(false);
+        }
+        Slider1.value = currentValue / maxValue;
 
+    }
     public void spawnEnem()
     {
         
@@ -88,7 +101,8 @@ public class moveAndShoot : MonoBehaviour
     }
 
     void Update()
-    {
+    {   //slider
+        healthbar1(healthInt, maxVal1);
 
         //spawning enemy
         timeCount1 -= Time.deltaTime;
