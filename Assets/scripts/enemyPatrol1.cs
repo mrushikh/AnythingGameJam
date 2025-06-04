@@ -19,6 +19,7 @@ public class enemyPatrol1 : MonoBehaviour
     //health
     public int health;
     private Collider2D col;
+    public GameObject parent;
     public IEnumerator spawnLaser1()
     {
 
@@ -34,24 +35,20 @@ public class enemyPatrol1 : MonoBehaviour
        
 
     }
-    public IEnumerator letPass()
+    public IEnumerator letPass(float b)
     {
 
 
         col.enabled = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(b);
         col.enabled = true;
 
 
     }
-    public void Dest1()
-    {
-        Destroy(pointC);
-        Destroy(pointD);
-        Destroy(gameObject);
-    }
+    
     private void OnDestroy()
     {
+        Destroy(parent);
         Destroy(pointC);
         Destroy(pointD);
         Destroy(gameObject);
@@ -131,14 +128,22 @@ public class enemyPatrol1 : MonoBehaviour
        
         if (collision.CompareTag("SpiderEnemy"))
         {
-            if (collision.gameObject != null)
+            int rand = Random.Range(0, 2);
+            if (rand == 0)
             {
-                Destroy(collision.gameObject);
+                StartCoroutine(letPass(2));
+            }
+            else if (rand == 1)
+            {
+                if (collision.gameObject != null)
+                {
+                    Destroy(collision.gameObject);
+                }
             }
         }
         if (collision.CompareTag("Player"))
         {
-            StartCoroutine(letPass());
+            StartCoroutine(letPass(1));
         }
     }
 }

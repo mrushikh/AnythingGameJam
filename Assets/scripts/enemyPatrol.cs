@@ -20,7 +20,7 @@ public class enemyPatrol : MonoBehaviour
     //health
     public int health;
     private Collider2D col1;
-
+    public GameObject parent1;
     public IEnumerator spawnLaser()
     {
 
@@ -51,16 +51,11 @@ public class enemyPatrol : MonoBehaviour
         }
 
     }
-    public void Dest2()
-    {
-        Destroy(pointB);
-        Destroy(pointA);
-        Destroy(gameObject);
-    }
-    public IEnumerator letPass1()
+    
+    public IEnumerator letPass1(float a)
     {
         col1.enabled = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(a);
         col1.enabled = true;
 
     }
@@ -75,6 +70,7 @@ public class enemyPatrol : MonoBehaviour
     }
     private void OnDestroy()
     {
+        Destroy(parent1);
         Destroy(pointB);
         Destroy(pointA);
         Destroy(gameObject);
@@ -125,7 +121,7 @@ public class enemyPatrol : MonoBehaviour
         if (health < 1)
         {
 
-            Dest2();
+            Destroy(gameObject);
 
         }
         
@@ -143,13 +139,23 @@ public class enemyPatrol : MonoBehaviour
         }
         if (collision.CompareTag("EnemyEye"))
         {
-            if (collision.gameObject != null)
+            int rand = Random.Range(0, 2);
+            if (rand == 0)
             {
-                Destroy(collision.gameObject);
+                StartCoroutine(letPass1(2));
+            }else if (rand == 1)
+            {
+                if (collision.gameObject != null)
+                {
+                    Destroy(collision.gameObject);
+                }
             }
+
+            
         }
         if (collision.CompareTag("SpawnEye"))
         {
+
             if (collision.gameObject != null)
             {
                 Destroy(collision.gameObject);
@@ -157,7 +163,7 @@ public class enemyPatrol : MonoBehaviour
         }
         if (collision.CompareTag("Player"))
         {
-            StartCoroutine(letPass1());
+            StartCoroutine(letPass1(1));
         }
 
 

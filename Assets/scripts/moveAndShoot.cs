@@ -46,7 +46,7 @@ public class moveAndShoot : MonoBehaviour
         
         
         
-            float[] spot = { -13, -7, 0, 7, 12.5f };
+            float[] spot = { -12.8f, -7.2f, 0, 7.2f, 12.6f };
             int space=Random.Range(0,5);
             float spawnX=spot[space];
             Vector2 spaw=new Vector2(spawnX,12);
