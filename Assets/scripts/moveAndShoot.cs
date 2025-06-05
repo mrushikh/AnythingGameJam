@@ -208,9 +208,11 @@ public class moveAndShoot : MonoBehaviour
         //Debug.Log(healthInt);
     }
     
-    private void OnCollisionExit2D(Collision2D collision)
+    
+        
+   private void OnTriggerExit2D(Collider2D collision)
     {
-        onPlatform=false ;
+        onPlatform = false;
     }
     //movement
     void FixedUpdate()
