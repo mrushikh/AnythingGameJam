@@ -536,9 +536,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../Sound Design/FMOD Projects/Literally Anything Jam 2025/Literally
-    Anything Jam 2025.fspro
-  sourceBankPath: ../../Sound Design/FMOD Projects/Literally Anything Jam 2025/Build
+  sourceProjectPath: Assets/FMOD Project/Literally Anything Jam 2025.fspro
+  sourceBankPath: Assets/FMOD Project/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
