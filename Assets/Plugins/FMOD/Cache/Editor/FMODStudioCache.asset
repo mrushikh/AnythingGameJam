@@ -191,7 +191,7 @@ MonoBehaviour:
   Path: ../../Sound Design/FMOD Projects/Literally Anything Jam 2025/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638846329429744027
+  lastModified: 638847134530239308
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -211,7 +211,7 @@ MonoBehaviour:
   Path: ../../Sound Design/FMOD Projects/Literally Anything Jam 2025/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638846329429749816
+  lastModified: 638847134530248964
   FileSizes:
   - Name: Desktop
     Value: 1162
@@ -269,7 +269,7 @@ MonoBehaviour:
   - {fileID: -2359368434823032386}
   StringsBanks:
   - {fileID: -2109960297793352854}
-  cacheTime: 638846329429947462
+  cacheTime: 638847134530474883
   cacheVersion: 131624
 --- !u!114 &1662896807559725498
 MonoBehaviour:
@@ -286,7 +286,7 @@ MonoBehaviour:
   Path: ../../Sound Design/FMOD Projects/Literally Anything Jam 2025/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638846329429947462
+  lastModified: 638847134530474883
   FileSizes:
   - Name: Desktop
     Value: 1584672
