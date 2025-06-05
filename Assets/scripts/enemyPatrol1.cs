@@ -131,7 +131,7 @@ public class enemyPatrol1 : MonoBehaviour
             int rand = Random.Range(0, 4);
             if (rand <3)
             {
-                StartCoroutine(letPass(2));
+                StartCoroutine(letPass(1));
             }
             else 
             {
@@ -143,7 +143,7 @@ public class enemyPatrol1 : MonoBehaviour
         }
         if (collision.CompareTag("Player"))
         {
-            StartCoroutine(letPass(1));
+            StartCoroutine(letPass(0.5f));
         }
     }
 }

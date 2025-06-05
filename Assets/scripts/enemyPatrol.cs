@@ -142,7 +142,7 @@ public class enemyPatrol : MonoBehaviour
             int rand = Random.Range(0, 4);
             if (rand<2)
             {
-                StartCoroutine(letPass1(2));
+                StartCoroutine(letPass1(1));
             }else
             {
                 if (collision.gameObject != null)
