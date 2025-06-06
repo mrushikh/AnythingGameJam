@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
@@ -39,12 +40,18 @@ public class moveAndShoot : MonoBehaviour
     private float timeCount2 = 5;
     //laserMouth
     public GameObject laserMouth;
+    private float timeCount3=10;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         OnGround = true;
         maxVal1=healthInt;
+        
 
+    }
+    public void loseScreen()
+    {
+        SceneManager.LoadScene(2);
     }
     public void healthbar1(float currentValue, float maxValue)
     {
@@ -57,9 +64,6 @@ public class moveAndShoot : MonoBehaviour
     }
     public void spawnEnem()
     {
-        
-        
-        
             float[] spot = { -12.8f, -7.2f, 0, 7.2f, 12.6f };
             int space=Random.Range(0,5);
             float spawnX=spot[space];
@@ -84,10 +88,10 @@ public class moveAndShoot : MonoBehaviour
     }
 
 
-    public IEnumerator spawnLazerMouth()
+    public void spawnLazerMouth()
     {   
         Instantiate(laserMouth,new Vector2(0, 0), Quaternion.identity);
-        yield return new WaitForSeconds(2);
+        
         
     }
     public IEnumerator falltimer()
@@ -112,18 +116,35 @@ public class moveAndShoot : MonoBehaviour
 
         //spawning enemy
         timeCount1 -= Time.deltaTime;
-        if (timeCount1 < 0) { 
+        if (timeCount1 < 0) {
+            if (bossScript.spider == false)
+            {
+                timeCount1 = 5;
+            }
+            else
+            {
+                timeCount1 = 2;
+            }
+            
             spawnEnem();
-            timeCount1 = 3;
-            StartCoroutine(spawnLazerMouth());
+            
         }
 
         timeCount2 -= Time.deltaTime;
         if (timeCount2 < 0&&bossScript.spider==true)
         {
-            spawnEnem2();
             timeCount2 = 2;
+            spawnEnem2();
+            
        
+        }
+        timeCount3 -= Time.deltaTime;
+        if (timeCount3 < 0)
+        {
+            timeCount3 = 20;
+            spawnLazerMouth();
+
+
         }
         //fliping
         moveX = Input.GetAxisRaw("Horizontal");

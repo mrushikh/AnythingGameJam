@@ -1,8 +1,9 @@
-using UnityEngine;
-using UnityEngine.UI;
-using FMODUnity;
 using FMOD.Studio;
+using FMODUnity;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class bossScript : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class bossScript : MonoBehaviour
         emitter = GetComponent<StudioEventEmitter>();
         spider = true;
         phase = 1;
+    }
+    public void winScreen()
+    {
+        SceneManager.LoadScene(3);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -74,6 +79,10 @@ public class bossScript : MonoBehaviour
             spider = false;
             StartCoroutine(destroyGround());
             
+        }
+        if (health < 0)
+        {
+            winScreen();
         }
     }
 }
