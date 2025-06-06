@@ -119,7 +119,7 @@ public class moveAndShoot : MonoBehaviour
         }
 
         timeCount2 -= Time.deltaTime;
-        if (timeCount2 < 0)
+        if (timeCount2 < 0&&bossScript.spider==true)
         {
             spawnEnem2();
             timeCount2 = 2;

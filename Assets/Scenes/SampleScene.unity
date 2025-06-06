@@ -770,7 +770,7 @@ GameObject:
   - component: {fileID: 537465130}
   - component: {fileID: 537465133}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: bossHeart
   m_TagString: Boss
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -788,7 +788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6776bcaa2f91d54cbb6f7fc377e8308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
+  health: 500
   Slider2: {fileID: 466021220}
 --- !u!61 &537465131
 BoxCollider2D:
