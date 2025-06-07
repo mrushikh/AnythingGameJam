@@ -30,14 +30,14 @@ public class moveAndShoot : MonoBehaviour
     //enemySpawn
     public GameObject enemySpawner;
     
-    private float timeCount1 = 5;
+    private float timeCount1 = 3;
     //spiderSpawn
     public GameObject enemySpawner2;
     public GameObject enemySpawner3;
     //slider
     public Slider Slider1;
     private int maxVal1;
-    private float timeCount2 = 5;
+    private float timeCount2 = 3;
     //laserMouth
     public GameObject laserMouth;
     private float timeCount3=10;
@@ -106,11 +106,12 @@ public class moveAndShoot : MonoBehaviour
     public IEnumerator damage(int a)
     {
         healthInt -= a;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
     }
 
     void Update()
+
     {   //slider
         healthbar1(healthInt, maxVal1);
 
@@ -123,7 +124,7 @@ public class moveAndShoot : MonoBehaviour
             }
             else
             {
-                timeCount1 = 2;
+                timeCount1 = 1;
             }
             
             spawnEnem();
@@ -185,8 +186,13 @@ public class moveAndShoot : MonoBehaviour
 
         }
 
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 
-       
+
+
 
     }
 
@@ -206,13 +212,16 @@ public class moveAndShoot : MonoBehaviour
 
 
         }
-        else
-        {
-            onPlatform=false;
-        }
+        
         if (other.CompareTag("EnemyBull"))
         {
             StartCoroutine (damage(10));
+        }
+        if (other.CompareTag("SpawnEye"))
+        {
+            Destroy(other.gameObject);
+            
+            StartCoroutine(damage(5));
         }
         if (other.CompareTag("EnemyEye"))
         {

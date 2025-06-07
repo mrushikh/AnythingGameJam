@@ -13,5 +13,11 @@ public class forOpening : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
-    
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }

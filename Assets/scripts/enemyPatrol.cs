@@ -13,7 +13,7 @@ public class enemyPatrol : MonoBehaviour
     public float speed;
 
     //laser
-    public GameObject laser;
+    public GameObject laser1;
     private Vector2 scaleChange;
     public Transform startPoint;
     private bool laserHap = false;
@@ -22,31 +22,29 @@ public class enemyPatrol : MonoBehaviour
     private Collider2D col1;
     public GameObject parent1;
     private bool active;
+
     public IEnumerator spawnLaser()
     {
 
         if (currPoint == pointB.transform)
         {
             laserHap = true;
-            float yscale = pointB.transform.localScale.x - startPoint.position.x;
-            scaleChange.x = currPoint.position.x - startPoint.position.x;
-            laser.transform.localScale = scaleChange;
-            float ChangePos = (laser.transform.localScale.x) / 2;
-            Vector2 place = new Vector2(startPoint.position.x + ChangePos, startPoint.position.y);
 
-            Instantiate(laser, place, Quaternion.identity);
+            scaleChange.x = 1.95f;
+            laser1.transform.localScale = scaleChange;
+            Vector2 place = new Vector2(startPoint.position.x + 2.2f, startPoint.position.y);
+
+            Instantiate(laser1, place, Quaternion.identity);
             yield return new WaitForSeconds(1);
             laserHap = false;
         }
         else if (currPoint == pointA.transform)
         {
             laserHap = true;
-            float yscale1 = pointA.transform.localScale.x - startPoint.position.x;
-            scaleChange.x = currPoint.position.x - startPoint.position.x;
-            laser.transform.localScale = scaleChange;
-            float ChangePos1 = (laser.transform.localScale.x) / 2;
-            Vector2 place1 = new Vector2(startPoint.position.x + ChangePos1, startPoint.position.y);
-            Instantiate(laser, place1, Quaternion.identity);
+            scaleChange.x = 1.95f;
+            laser1.transform.localScale = scaleChange;
+            Vector2 place1 = new Vector2(startPoint.position.x - 2.2f, startPoint.position.y);
+            Instantiate(laser1, place1, Quaternion.identity);
             yield return new WaitForSeconds(1);
             laserHap = false;
         }
@@ -63,20 +61,20 @@ public class enemyPatrol : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        scaleChange.y = 0.3f;
+        scaleChange.y = 2f;
         rb = GetComponent<Rigidbody2D>();
         col1 = GetComponent<Collider2D>();
         currPoint = pointB.transform;
         
 
     }
-    //private void OnDestroy()
-    //{
-    //    Destroy(parent1);
-    //    Destroy(pointB);
-    //    Destroy(pointA);
-        
-    //}
+    private void OnDestroy()
+    {
+        Destroy(parent1);
+        Destroy(pointB);
+        Destroy(pointA);
+
+    }
 
     // Update is called once per frame
     void Update()
@@ -144,9 +142,9 @@ public class enemyPatrol : MonoBehaviour
         if (collision.CompareTag("EnemyEye"))
         {
             
-            int rand = Random.Range(3, 4);
+            int rand = Random.Range(0, 4);
 
-            if (rand < 2)
+            if (rand < 3||laserHap==true)
             {
                 StartCoroutine(letPass1(1));
             }
