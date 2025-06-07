@@ -41,12 +41,14 @@ public class moveAndShoot : MonoBehaviour
     //laserMouth
     public GameObject laserMouth;
     private float timeCount3=10;
+    //animator
+    Animator animator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         OnGround = true;
         maxVal1=healthInt;
-        
+        animator = GetComponent<Animator>();
 
     }
     public void loseScreen()
@@ -198,7 +200,8 @@ public class moveAndShoot : MonoBehaviour
     }
 
     public void OnTriggerEnter2D(Collider2D other)
-    {
+    {   //animation
+        
         // Check if we collided with the ground
         if (GroundLayer == (1 << other.gameObject.layer))
         {
@@ -257,5 +260,13 @@ public class moveAndShoot : MonoBehaviour
 
         // Make our player move left/right
         rb.linearVelocity = movement;
+        if (Math.Abs(rb.linearVelocityX)>0)
+        {
+            animator.SetFloat("xVelocity", 5);
+        }else 
+        {
+            animator.SetFloat("xVelocity", 0);
+        }
+        
     }
 }
