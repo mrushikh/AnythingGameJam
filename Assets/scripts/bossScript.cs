@@ -43,7 +43,7 @@ public class bossScript : MonoBehaviour
 
     public IEnumerator destroyGround() {
         Debug.Log("shake");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         Destroy(GameObject.FindWithTag("ground"));
         GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("SpiderEnemy");
         foreach (GameObject obj in objectsWithTag)
@@ -54,7 +54,7 @@ public class bossScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(phase);
+        
         healthbar(health,maxVal);
 
          if (emitter != null && emitter.IsPlaying())
@@ -75,16 +75,17 @@ public class bossScript : MonoBehaviour
 
         if (health<(maxVal-(maxVal/3))&&phase==1)
         {
+            
             phase = 2;
             
-            
+
         }
         if (health < (maxVal - (maxVal /2)) && phase == 2)
-        {
+        {   
             phase = 3;
             spider = false;
             StartCoroutine(destroyGround());
-
+            
         }
         if (health < 0)
         {

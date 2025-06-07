@@ -25,7 +25,8 @@ public class enemyPatrol1 : MonoBehaviour
 
        
             laserOccur = true;
-            
+            rb.linearVelocityX = 0;
+            yield return new WaitForSeconds(0.5f);
             float yOffset=(laser2.transform.localScale.y)/2;
             Vector2 place = new Vector2(statPoint.position.x, statPoint.position.y+yOffset);
 

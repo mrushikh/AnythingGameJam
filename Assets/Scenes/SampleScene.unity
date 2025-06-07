@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6776bcaa2f91d54cbb6f7fc377e8308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 1000
   Slider2: {fileID: 466021220}
 --- !u!4 &537465132
 Transform:

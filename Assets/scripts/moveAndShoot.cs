@@ -120,21 +120,26 @@ public class moveAndShoot : MonoBehaviour
 
         //spawning enemy
         timeCount1 -= Time.deltaTime;
+        timeCount2 -= Time.deltaTime;
+        timeCount3 -= Time.deltaTime;
         if (timeCount1 < 0) {
-            if (bossScript.spider == false)
-            {
-                timeCount1 = 5;
-            }
-            else
+            if (bossScript.phase==3)
             {
                 timeCount1 = 1;
+                Debug.Log("a");
+                
+            }
+            else if (bossScript.phase!=3)
+            {
+
+                timeCount1 = 5;
             }
             
             spawnEnem();
             
         }
 
-        timeCount2 -= Time.deltaTime;
+        
         if (timeCount2 < 0&&bossScript.spider==true)
         {
             timeCount2 = 2;
@@ -142,7 +147,7 @@ public class moveAndShoot : MonoBehaviour
             
        
         }
-        timeCount3 -= Time.deltaTime;
+       
         if (timeCount3 < 0&&bossScript.phase>1)
         {
             timeCount3 = 20;
