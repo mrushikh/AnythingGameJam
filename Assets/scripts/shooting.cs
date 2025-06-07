@@ -1,5 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class shooting : MonoBehaviour
 {   //gun follow
@@ -11,11 +13,13 @@ public class shooting : MonoBehaviour
     private float timer;
     public float timeBWFiring;
 
+    // FMOD emitter reference
+    public StudioEventEmitter gunshotEmitter;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        gunshotEmitter = GetComponent<StudioEventEmitter>(); // Telling Unity to talk to FMOD Studio Event Emitter component
         mainCam=GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -43,6 +47,10 @@ public class shooting : MonoBehaviour
         {
             canFire=false;
             Instantiate(bullet,bulletTransform.position,Quaternion.identity);
+            if (gunshotEmitter != null) // Playing gunshot SFX via the emitter
+            {
+                gunshotEmitter.Play();
+            }
         }
 
         

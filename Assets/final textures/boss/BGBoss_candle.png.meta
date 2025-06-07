@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BGBoss_candle_0: -7470448557343695724
+      BGBoss_candle_1: 7048044239872807344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BGBoss_chest_0: 2817917089954500998
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

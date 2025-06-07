@@ -570,6 +570,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355605352}
   - component: {fileID: 355605353}
+  - component: {fileID: 355605354}
   m_Layer: 0
   m_Name: point
   m_TagString: Untagged
@@ -609,6 +610,38 @@ MonoBehaviour:
   bulletTransform: {fileID: 2071583435}
   canFire: 1
   timeBWFiring: 0.5
+  gunshotEmitter: {fileID: 355605354}
+--- !u!114 &355605354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355605351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1070057123
+      Data2: 1107404787
+      Data3: 1780960917
+      Data4: 946810829
+    Path: event:/SFX/Player/PlayerGunshot
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &357668868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1030,6 +1063,7 @@ GameObject:
   - component: {fileID: 537465130}
   - component: {fileID: 537465133}
   - component: {fileID: 537465134}
+  - component: {fileID: 537465135}
   m_Layer: 0
   m_Name: bossHeart
   m_TagString: Boss
@@ -1051,6 +1085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 300
   Slider2: {fileID: 466021220}
+  bossDamagedEmitter: {fileID: 537465135}
 --- !u!4 &537465132
 Transform:
   m_ObjectHideFlags: 0
@@ -1088,7 +1123,7 @@ MonoBehaviour:
     Path: event:/Music/Music
   Event: 
   EventPlayTrigger: 1
-  EventStopTrigger: 0
+  EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 1
@@ -1156,6 +1191,37 @@ PolygonCollider2D:
       - {x: 1.0157789, y: -0.9079764}
       - {x: 1.2123356, y: 0.2852645}
   m_UseDelaunayMesh: 0
+--- !u!114 &537465135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537465129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1031114486
+      Data2: 1227315673
+      Data3: 416623799
+      Data4: 1130674410
+    Path: event:/SFX/Boss/BossHeartDamaged
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &560662118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2853,6 +2919,9 @@ GameObject:
   - component: {fileID: 2125904696}
   - component: {fileID: 2125904697}
   - component: {fileID: 2125904698}
+  - component: {fileID: 2125904699}
+  - component: {fileID: 2125904700}
+  - component: {fileID: 2125904701}
   m_Layer: 0
   m_Name: Square
   m_TagString: Player
@@ -2980,6 +3049,9 @@ MonoBehaviour:
     m_Bits: 8
   GroundCollider: {fileID: 590350663}
   OnGround: 0
+  jumpEmitter: {fileID: 2125904698}
+  fallEmitter: {fileID: 2125904699}
+  PlayerDamagedEmitter: {fileID: 2125904701}
   healthInt: 100
   enemySpawner: {fileID: 2022581295595901580, guid: 39168f9f0a51ea648a4120e458a71494, type: 3}
   enemySpawner2: {fileID: 8252577709129987975, guid: c873a9b2dac937541b31196a9a59c382, type: 3}
@@ -3032,7 +3104,69 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.1989026, y: 2.4022737}
   m_EdgeRadius: 0
---- !u!95 &2125904698
+--- !u!114 &2125904698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125904691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1099594327
+      Data2: 1334814450
+      Data3: -40960589
+      Data4: 159626693
+    Path: event:/SFX/Player/PlayerJump
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &2125904699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125904691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1323289104
+      Data2: 1236263003
+      Data3: -626443358
+      Data4: 1455976242
+    Path: event:/SFX/Player/PlayerFallThrough
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 1
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!95 &2125904700
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -3054,6 +3188,37 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2125904701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125904691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -301205384
+      Data2: 1102954113
+      Data3: 996044984
+      Data4: -1478765675
+    Path: event:/SFX/Player/PlayerDamaged
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &6344596963311428744
 PrefabInstance:
   m_ObjectHideFlags: 0

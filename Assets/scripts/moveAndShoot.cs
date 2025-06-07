@@ -6,6 +6,8 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 using Slider = UnityEngine.UI.Slider;
+using FMODUnity;
+using FMOD.Studio;
 
 public class moveAndShoot : MonoBehaviour
 {
@@ -23,6 +25,9 @@ public class moveAndShoot : MonoBehaviour
     public LayerMask GroundLayer;
     public BoxCollider2D GroundCollider;
     public bool OnGround;
+    public StudioEventEmitter jumpEmitter;
+    public StudioEventEmitter fallEmitter;
+    public StudioEventEmitter PlayerDamagedEmitter;
 
     //health
     public int healthInt;
@@ -109,7 +114,7 @@ public class moveAndShoot : MonoBehaviour
     {
         healthInt -= a;
         yield return new WaitForSeconds(1f);
-
+        PlayerDamagedEmitter.Play();
     }
 
     void Update()
@@ -177,15 +182,24 @@ public class moveAndShoot : MonoBehaviour
             // Make our player jump
             rb.linearVelocity = new Vector2(rb.linearVelocityX, JumpForce);
             OnGround = false;
+
+            if (jumpEmitter != null)
+                {
+                    jumpEmitter.Play();
+                }
         }
         
        
         //fallthrough platform
         
-        if (Input.GetKey(KeyCode.S)&&onPlatform==true&&rb.position.y>-4.5)
+        if (Input.GetKeyDown(KeyCode.S) && onPlatform && rb.position.y > -4.5f)
         {
 
             StartCoroutine(falltimer());
+            if (fallEmitter != null)
+                {
+                    fallEmitter.Play();
+                }
 
         }
 

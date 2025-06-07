@@ -13,6 +13,7 @@ public class bossScript : MonoBehaviour
     private StudioEventEmitter emitter;
     public static bool spider;
     public static int phase;
+    public StudioEventEmitter bossDamagedEmitter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,6 +31,7 @@ public class bossScript : MonoBehaviour
         if (collision.CompareTag("PlayBull")) {
             Destroy(collision.gameObject);
             health -= 5;
+            bossDamagedEmitter.Play();
         }
     }
     public void  healthbar(float currentValue,float maxValue)
