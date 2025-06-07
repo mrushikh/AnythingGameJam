@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BGBoss_arms_0: -3592139173880705245
+      BGBoss_arms_1: 8407135688402265498
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

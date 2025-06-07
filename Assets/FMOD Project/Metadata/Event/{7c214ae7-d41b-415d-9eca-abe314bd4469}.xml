@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{7c214ae7-d41b-415d-9eca-abe314bd4469}">
 		<property name="name">
-			<value>EnemyAttack</value>
+			<value>EyeBotLaser</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
@@ -50,7 +50,7 @@
 			<destination>{523eb935-3bfe-48e9-bdbb-22670c7171b0}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{c1559339-6996-42c3-8487-d0638662888a}</destination>
+			<destination>{dd370053-4db1-4602-b3f9-fb7baebf39fe}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{bd1373a8-8182-4229-a4cd-1edcc34ceaec}" />
