@@ -12,7 +12,7 @@ public class bossScript : MonoBehaviour
     private float maxVal;
     private StudioEventEmitter emitter;
     public static bool spider;
-    private int phase;
+    public static int phase;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -54,7 +54,7 @@ public class bossScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(phase);
         healthbar(health,maxVal);
 
          if (emitter != null && emitter.IsPlaying())
@@ -73,12 +73,18 @@ public class bossScript : MonoBehaviour
             }
         }
 
-        if (health<maxVal/2&&phase==1)
+        if (health<(maxVal-(maxVal/3))&&phase==1)
         {
             phase = 2;
+            
+            
+        }
+        if (health < (maxVal - (maxVal /2)) && phase == 2)
+        {
+            phase = 3;
             spider = false;
             StartCoroutine(destroyGround());
-            
+
         }
         if (health < 0)
         {

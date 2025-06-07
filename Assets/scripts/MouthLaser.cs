@@ -6,7 +6,7 @@ public class MouthLaser : MonoBehaviour
 
     public IEnumerator die1()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         Destroy(gameObject);
 
     }
@@ -15,9 +15,5 @@ public class MouthLaser : MonoBehaviour
         StartCoroutine(die1());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+   
 }

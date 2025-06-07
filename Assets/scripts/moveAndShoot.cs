@@ -111,8 +111,9 @@ public class moveAndShoot : MonoBehaviour
     }
 
     void Update()
-
-    {   //slider
+    {
+        
+        //slider
         healthbar1(healthInt, maxVal1);
 
         //spawning enemy
@@ -140,7 +141,7 @@ public class moveAndShoot : MonoBehaviour
        
         }
         timeCount3 -= Time.deltaTime;
-        if (timeCount3 < 0)
+        if (timeCount3 < 0&&bossScript.phase>1)
         {
             timeCount3 = 20;
             spawnLazerMouth();
@@ -232,6 +233,10 @@ public class moveAndShoot : MonoBehaviour
             StartCoroutine(damage(5));
         }
         if (other.CompareTag("laser2"))
+        {
+            StartCoroutine(damage(10));
+        }
+        if (other.CompareTag("MouthLaser"))
         {
             StartCoroutine(damage(10));
         }
