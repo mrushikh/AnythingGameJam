@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2119366837792432341}
   - component: {fileID: 627210520000323703}
   - component: {fileID: 4989509959402968677}
+  - component: {fileID: -7618036961783758561}
   m_Layer: 0
   m_Name: mouthLaser1_0
   m_TagString: Untagged
@@ -101,3 +102,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dieTime: 1
+  bossLaserEmitter: {fileID: -7618036961783758561}
+--- !u!114 &-7618036961783758561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2781729454631617728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1417789080
+      Data2: 1321621922
+      Data3: 913006489
+      Data4: -234472071
+    Path: event:/SFX/Boss/BossLaser
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

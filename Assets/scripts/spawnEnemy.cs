@@ -1,9 +1,12 @@
 using System.Collections;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class spawnEnemy : MonoBehaviour
 {
     public GameObject enemy;
+    public StudioEventEmitter EyebotSpawnEmitter;
     private bool spawned;
     public IEnumerator destroy()
     {
@@ -24,6 +27,10 @@ public class spawnEnemy : MonoBehaviour
             if (spawned == false)
             {
                 Instantiate(enemy, new Vector2(transform.position.x, transform.position.y + 0.01f), Quaternion.identity);
+                if (EyebotSpawnEmitter != null)
+                    {
+                        EyebotSpawnEmitter.Play();
+                    }
                 spawned = true;
             }
 

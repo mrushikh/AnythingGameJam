@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6563929719675809238}
   - component: {fileID: 3160552762761985697}
   - component: {fileID: 319570385675980614}
+  - component: {fileID: 237469482029893321}
   m_Layer: 0
   m_Name: SpawnEyes
   m_TagString: SpawnEye
@@ -104,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 4456447133522119093, guid: 61e8211719e7e9848be321fc31284b81, type: 3}
+  EyebotSpawnEmitter: {fileID: 237469482029893321}
 --- !u!50 &6563929719675809238
 Rigidbody2D:
   serializedVersion: 5
@@ -203,3 +205,34 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 2.635
+--- !u!114 &237469482029893321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022581295595901580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1011065833
+      Data2: 1168363630
+      Data3: 83444148
+      Data4: -1637462954
+    Path: event:/SFX/Enemy/EyeBotSpawn
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

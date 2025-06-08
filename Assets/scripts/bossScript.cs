@@ -63,6 +63,7 @@ public class bossScript : MonoBehaviour
     public IEnumerator destroyPlatform()
     {
         Debug.Log("shake");
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/GroundShake");
         yield return new WaitForSeconds(3);
         
         GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("Finish");

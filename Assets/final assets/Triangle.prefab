@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dieTime: 3
+  bossLaserEmitter: {fileID: 0}
 --- !u!1001 &8350701619860179859
 PrefabInstance:
   m_ObjectHideFlags: 0

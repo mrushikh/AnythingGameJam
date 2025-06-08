@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spiderbot_0: 8452824215773846641
+      spiderbot_1: -2102253663173537295
+      spiderbot_2: 4171876463558680537
+      spiderbot_3: 7359579170421628596
+      spiderbot_4: -784405194321539935
+      spiderbot_5: -8582968856138384268
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

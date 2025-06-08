@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class spawnEnem2 : MonoBehaviour
 {
     public GameObject spider1;
+    public StudioEventEmitter SpiderbotSpawnEmitter;
+
     public IEnumerator destroy()
     {
         yield return new WaitForSeconds(5);
@@ -21,6 +25,10 @@ public class spawnEnem2 : MonoBehaviour
         {   
 
             Instantiate(spider1, new Vector2(transform.position.x,-4), Quaternion.identity);
+             if (SpiderbotSpawnEmitter != null)
+            {
+                SpiderbotSpawnEmitter.Play();
+            }
             Destroy(gameObject);
         }
 

@@ -21,7 +21,7 @@ MonoBehaviour:
   Banks:
   - {fileID: 3718087123198708566}
   IsStream: 0
-  Is3D: 0
+  Is3D: 1
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
@@ -54,6 +54,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8728621296603647336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemy/SpiderBotKilled
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemy/SpiderBotKilled
+  Guid:
+    Data1: 158136758
+    Data2: 1322679050
+    Data3: 1734765468
+    Data4: -995312422
+  Banks:
+  - {fileID: 3718087123198708566}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8463071248911604478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,60 +99,6 @@ MonoBehaviour:
     Data2: 1227315673
     Data3: 416623799
     Data4: 1130674410
-  Banks:
-  - {fileID: 3718087123198708566}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7684970416673626129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Boss/BossAttackWarning
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Boss/BossAttackWarning
-  Guid:
-    Data1: -803472621
-    Data2: 1143153613
-    Data3: 1050536844
-    Data4: -1879722017
-  Banks:
-  - {fileID: 3718087123198708566}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-7210666878420989256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Environment/GroundShake
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Environment/GroundShake
-  Guid:
-    Data1: -556827088
-    Data2: 1112318774
-    Data3: 178037161
-    Data4: -945603886
   Banks:
   - {fileID: 3718087123198708566}
   IsStream: 0
@@ -189,7 +162,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-3843334178588447826
+--- !u!114 &-4241785340850719514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,23 +172,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Environment/Ambience
+  m_Name: event:/SFX/GroundShake
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Environment/Ambience
+  Path: event:/SFX/GroundShake
   Guid:
-    Data1: -1425274525
-    Data2: 1138576941
-    Data3: -313675842
-    Data4: -1254865184
+    Data1: -556827088
+    Data2: 1112318774
+    Data3: 178037161
+    Data4: -945603886
   Banks:
   - {fileID: 3718087123198708566}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 4500
 --- !u!114 &-3534357185290428679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +286,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638849106898877889
+  lastModified: 638849700935021158
   FileSizes:
   - Name: Desktop
     Value: 3888800
@@ -418,23 +391,25 @@ MonoBehaviour:
   - {fileID: -2726471972789484368}
   - {fileID: -4409610653350652766}
   - {fileID: -6550509548761071747}
-  - {fileID: -7684970416673626129}
   - {fileID: -8992303853736528324}
   - {fileID: 6365844788321822590}
-  - {fileID: -7210666878420989256}
-  - {fileID: 6478760544209434354}
   - {fileID: 3109502129012311621}
-  - {fileID: -3843334178588447826}
   - {fileID: 8831431176694485067}
   - {fileID: 8524155174140870290}
   - {fileID: 4300497160507788151}
   - {fileID: -688429028391935683}
+  - {fileID: 4029316269571701730}
+  - {fileID: -8728621296603647336}
+  - {fileID: 6364510212883240908}
+  - {fileID: 6280839405021267382}
+  - {fileID: 6590687511720279277}
+  - {fileID: -4241785340850719514}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1425717060936283230}
   StringsBanks:
   - {fileID: 834173250711222811}
-  cacheTime: 638849106898887923
+  cacheTime: 638849996425619931
   cacheVersion: 131624
 --- !u!114 &536736063810601844
 MonoBehaviour:
@@ -478,10 +453,10 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638849106898802751
+  lastModified: 638849994410588365
   FileSizes:
   - Name: Desktop
-    Value: 1836
+    Value: 1958
   Exists: 1
 --- !u!114 &1425717060936283230
 MonoBehaviour:
@@ -498,10 +473,10 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638849106898802751
+  lastModified: 638849994410577806
   FileSizes:
   - Name: Desktop
-    Value: 2862
+    Value: 3478
   Exists: 1
 --- !u!114 &1714487432510490000
 MonoBehaviour:
@@ -545,7 +520,7 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 638847242377117662
+  lastModified: 638845838330254517
   FileSizes:
   - Name: Desktop
     Value: 494
@@ -619,11 +594,38 @@ MonoBehaviour:
   Path: Assets/FMOD Project/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638849106898887923
+  lastModified: 638849996425619931
   FileSizes:
   - Name: Desktop
-    Value: 115584
+    Value: 297280
   Exists: 1
+--- !u!114 &4029316269571701730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemy/EyeBotKilled
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemy/EyeBotKilled
+  Guid:
+    Data1: 977659221
+    Data2: 1153054604
+    Data3: -1776863056
+    Data4: -1744885684
+  Banks:
+  - {fileID: 3718087123198708566}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4228712472338629384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,6 +734,84 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6145557120161258089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BossLaser/BossLaserIsFiring
+  m_EditorClassIdentifier: 
+  Name: BossLaserIsFiring
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4027631262
+    data2: 2886654273
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &6280839405021267382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemy/SpiderBotLaser
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemy/SpiderBotLaser
+  Guid:
+    Data1: 1799472720
+    Data2: 1156192875
+    Data3: 444941981
+    Data4: -1896972328
+  Banks:
+  - {fileID: 3718087123198708566}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6364510212883240908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Enemy/EyeBotDamaged
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Enemy/EyeBotDamaged
+  Guid:
+    Data1: -1946322896
+    Data2: 1214913333
+    Data3: 1983611058
+    Data4: -333704105
+  Banks:
+  - {fileID: 3718087123198708566}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6365844788321822590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,7 +839,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &6478760544209434354
+--- !u!114 &6590687511720279277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -769,14 +849,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Enemy/SpiderBotAttack
+  m_Name: event:/SFX/Enemy/SpiderBotDamaged
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Enemy/SpiderBotAttack
+  Path: event:/SFX/Enemy/SpiderBotDamaged
   Guid:
-    Data1: 1799472720
-    Data2: 1156192875
-    Data3: 444941981
-    Data4: -1896972328
+    Data1: -1200556554
+    Data2: 1276131142
+    Data3: -822228088
+    Data4: -472392116
   Banks:
   - {fileID: 3718087123198708566}
   IsStream: 0
@@ -836,10 +916,11 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 6145557120161258089}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 4794
 --- !u!114 &8831431176694485067
 MonoBehaviour:
   m_ObjectHideFlags: 0

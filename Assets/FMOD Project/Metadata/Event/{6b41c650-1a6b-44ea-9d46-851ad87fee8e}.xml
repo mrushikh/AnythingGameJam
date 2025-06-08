@@ -2,10 +2,10 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{6b41c650-1a6b-44ea-9d46-851ad87fee8e}">
 		<property name="name">
-			<value>SpiderBotAttack</value>
+			<value>SpiderBotLaser</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{fb78b863-ec4b-44ce-9153-2711748eb267}</destination>
@@ -28,6 +28,9 @@
 		<relationship name="timeline">
 			<destination>{3f59a9f7-5117-4a85-bf84-e0d60593225c}</destination>
 		</relationship>
+		<relationship name="parameters">
+			<destination>{6bde479b-d15c-492d-863c-e538d0710197}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{23ccda72-f3c0-4010-8f30-ba686d10b303}</destination>
 		</relationship>
@@ -38,6 +41,9 @@
 		</relationship>
 	</object>
 	<object class="MasterTrack" id="{ba843f03-f286-4356-ad93-05d954a7f1c1}">
+		<relationship name="modules">
+			<destination>{f938f326-3585-4894-9012-5222ea8bdeb0}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{d4d53bb4-0f8f-4fcb-ae9d-703eac2f81c3}</destination>
 		</relationship>
@@ -60,7 +66,15 @@
 			<value>false</value>
 		</property>
 	</object>
+	<object class="ActionSheet" id="{6bde479b-d15c-492d-863c-e538d0710197}">
+		<relationship name="modules">
+			<destination>{f938f326-3585-4894-9012-5222ea8bdeb0}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{d4d53bb4-0f8f-4fcb-ae9d-703eac2f81c3}">
+		<property name="volume">
+			<value>-3</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{0c9c74c2-d971-4894-b352-ab98921f7d1a}</destination>
 		</relationship>
@@ -71,6 +85,11 @@
 			<destination>{d5fca865-3950-4040-97ef-d9bc92668b37}</destination>
 		</relationship>
 	</object>
+	<object class="MultiSound" id="{f938f326-3585-4894-9012-5222ea8bdeb0}">
+		<relationship name="sounds">
+			<destination>{eea10337-9036-4ed5-a767-d7ec647989a4}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{63f1ec2f-6994-4157-9f1a-8d8f6694bf29}">
 		<relationship name="effects">
 			<destination>{df0740d6-1680-41aa-896f-0c0fdf320418}</destination>
@@ -79,10 +98,39 @@
 	<object class="MixerBusPanner" id="{31449964-d8be-4621-82c8-042c72bcc814}" />
 	<object class="MixerBusEffectChain" id="{0c9c74c2-d971-4894-b352-ab98921f7d1a}">
 		<relationship name="effects">
+			<destination>{7816d59a-c057-446c-a477-19cb784b3432}</destination>
+			<destination>{96a3e24c-a1a2-4030-a68b-5c77cd8fd0b9}</destination>
 			<destination>{37977a65-8f63-4f51-8b4e-cf442dc609a3}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{919b0e12-1ddf-427f-b50d-5be10a5e38af}" />
+	<object class="SingleSound" id="{eea10337-9036-4ed5-a767-d7ec647989a4}">
+		<relationship name="audioFile">
+			<destination>{dcbda8ba-683c-4634-8ba8-f142e6b1a5bd}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{df0740d6-1680-41aa-896f-0c0fdf320418}" />
+	<object class="ThreeEQEffect" id="{7816d59a-c057-446c-a477-19cb784b3432}">
+		<property name="lowGain">
+			<value>-3</value>
+		</property>
+		<property name="midGain">
+			<value>-3</value>
+		</property>
+		<property name="highGain">
+			<value>-8</value>
+		</property>
+	</object>
+	<object class="CompressorEffect" id="{96a3e24c-a1a2-4030-a68b-5c77cd8fd0b9}">
+		<property name="threshold">
+			<value>-26.5</value>
+		</property>
+		<property name="ratio">
+			<value>3.60000014</value>
+		</property>
+		<property name="gain">
+			<value>-8</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{37977a65-8f63-4f51-8b4e-cf442dc609a3}" />
 </objects>

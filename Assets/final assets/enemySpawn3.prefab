@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6481435032747976032}
   - component: {fileID: 922357798523854313}
   - component: {fileID: 5244768690031798557}
+  - component: {fileID: 6967762851217934612}
   m_Layer: 0
   m_Name: enemySpawn3
   m_TagString: SpiderEnemy
@@ -130,6 +131,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spider1: {fileID: 5690153570257417681, guid: 655795151400a604296f42642657b81b, type: 3}
+  SpiderbotSpawnEmitter: {fileID: 6967762851217934612}
+  SpiderbotKilledEmitter: {fileID: 0}
+  SpiderbotDamagedEmitter: {fileID: 0}
 --- !u!61 &5244768690031798557
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -176,3 +180,34 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 3.43, y: 2.41}
   m_EdgeRadius: 0
+--- !u!114 &6967762851217934612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4137323330375159275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -613960153
+      Data2: 1094491964
+      Data3: -767665237
+      Data4: -1355660878
+    Path: event:/SFX/Enemy/SpiderBotSpawn
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

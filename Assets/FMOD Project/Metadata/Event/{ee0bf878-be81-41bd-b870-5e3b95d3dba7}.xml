@@ -73,7 +73,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{f7ffa831-ef83-4e21-b97f-e29b968c7843}">
 		<property name="volume">
-			<value>-13.5</value>
+			<value>-5</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{01c9de67-8de4-4f36-bce6-b4ecac706637}</destination>
@@ -107,31 +107,31 @@
 	<object class="MixerBusPanner" id="{f253113a-6d7a-4e27-8002-8e06fdbfa8af}" />
 	<object class="MultiSound" id="{8069d560-83f1-4e4b-b4fd-d28677ce42ac}">
 		<relationship name="modulators">
-			<destination>{f4df1cfc-672e-423b-9fb5-5a3e1d4cc0ba}</destination>
+			<destination>{2d70f47e-48a7-4c5d-8e46-a189705d725e}</destination>
 		</relationship>
 		<relationship name="sounds">
-			<destination>{2cbca836-89a0-4033-b180-a82f9162a6dc}</destination>
-			<destination>{7fd49546-aea6-433d-835a-704bfcb72397}</destination>
+			<destination>{ad26a2fa-c386-4c51-90b5-036355ec733a}</destination>
+			<destination>{5ce8a528-7fd2-47b2-8262-a74e8b5ae680}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{14d0c48a-00bc-4f0c-a76c-99a96cfaf00a}" />
 	<object class="DistortionEffect" id="{711044c1-6d58-46f5-93b5-40e4e9a05bed}">
 		<property name="level">
-			<value>0.75</value>
+			<value>0.699999988</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{93ba8532-c740-4a8c-9901-35b361484b8b}" />
 	<object class="ThreeEQEffect" id="{6b1cf40a-f83c-4d58-883d-e37140187fcd}">
-		<property name="lowGain">
-			<value>4.5</value>
-		</property>
 		<property name="midGain">
-			<value>3.5</value>
+			<value>-0.5</value>
+		</property>
+		<property name="highGain">
+			<value>1.5</value>
 		</property>
 	</object>
 	<object class="CompressorEffect" id="{945bd769-ba9c-4984-a9a1-eebc8047702e}">
 		<property name="threshold">
-			<value>-34.5</value>
+			<value>-20.5</value>
 		</property>
 		<property name="attackTime">
 			<value>1.80000007</value>
@@ -140,23 +140,23 @@
 			<value>78</value>
 		</property>
 		<property name="gain">
-			<value>2.5</value>
+			<value>-3.5</value>
 		</property>
 	</object>
-	<object class="RandomizerModulator" id="{f4df1cfc-672e-423b-9fb5-5a3e1d4cc0ba}">
+	<object class="RandomizerModulator" id="{2d70f47e-48a7-4c5d-8e46-a189705d725e}">
 		<property name="nameOfPropertyBeingModulated">
 			<value>pitch</value>
 		</property>
 		<property name="amount">
-			<value>2</value>
+			<value>8</value>
 		</property>
 	</object>
-	<object class="SingleSound" id="{2cbca836-89a0-4033-b180-a82f9162a6dc}">
+	<object class="SingleSound" id="{ad26a2fa-c386-4c51-90b5-036355ec733a}">
 		<relationship name="audioFile">
 			<destination>{37b9d97e-28f0-4b52-8b11-3ee08cccc216}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{7fd49546-aea6-433d-835a-704bfcb72397}">
+	<object class="SingleSound" id="{5ce8a528-7fd2-47b2-8262-a74e8b5ae680}">
 		<relationship name="audioFile">
 			<destination>{76e76195-effb-4b8d-baad-ecc89d8a77dd}</destination>
 		</relationship>
