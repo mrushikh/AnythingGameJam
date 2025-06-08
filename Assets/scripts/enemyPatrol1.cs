@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -20,6 +21,8 @@ public class enemyPatrol1 : MonoBehaviour
     public int health;
     private Collider2D col;
     public GameObject parent;
+    //animator
+    Animator animator1;
     public IEnumerator spawnLaser1()
     {
 
@@ -28,8 +31,8 @@ public class enemyPatrol1 : MonoBehaviour
             rb.linearVelocityX = 0;
             yield return new WaitForSeconds(0.5f);
             float yOffset=(laser2.transform.localScale.y)/2;
-            Vector2 place = new Vector2(statPoint.position.x, statPoint.position.y+yOffset);
-
+            Vector2 place = new Vector2(statPoint.position.x, statPoint.position.y+8.3f);
+            
             Instantiate(laser2, place, Quaternion.identity);
             yield return new WaitForSeconds(1);
             laserOccur = false;
@@ -59,27 +62,15 @@ public class enemyPatrol1 : MonoBehaviour
     {
         col = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
-
+        animator1 = GetComponent<Animator>();
         currPoint = pointD.transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeLeft -= Time.deltaTime;
-        Vector2 point = currPoint.position - transform.position;
-        if (currPoint == pointD.transform)
-        {
-            rb.linearVelocity = new Vector2(speed, 0);
-        }
-        if (currPoint == pointC.transform)
-        {
-
-            rb.linearVelocity = new Vector2(-speed, 0);
-        }
-        if (laserOccur==true) { 
-            rb.linearVelocity=new Vector2(0, 0);
-        }
+        timeLeft -= Time.deltaTime;       
+        
 
         if (Vector2.Distance(transform.position, currPoint.position) < 0.5 && currPoint == pointD.transform)
         {
@@ -116,8 +107,22 @@ public class enemyPatrol1 : MonoBehaviour
             Destroy(gameObject);
 
         }
+        if (laserOccur == false)
+        {
+            if (animator1 != null)
+            {
+                animator1.SetFloat("shoot", 1);
+            }
+        }
+        else
+        {
+            if (animator1 != null)
+            {
+                animator1.SetFloat("shoot", 0);
+            }
+        }
     }
-
+  
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -129,10 +134,10 @@ public class enemyPatrol1 : MonoBehaviour
        
         if (collision.CompareTag("SpiderEnemy"))
         {
-            int rand = Random.Range(0, 4);
+            int rand = UnityEngine.Random.Range(0, 4);
             if (rand <3)
             {
-                StartCoroutine(letPass(1));
+                StartCoroutine(letPass(0.5f));
             }
             else 
             {
@@ -146,5 +151,26 @@ public class enemyPatrol1 : MonoBehaviour
         {
             StartCoroutine(letPass(0.5f));
         }
+    }
+    private void FixedUpdate()
+    {
+        
+        if (currPoint == pointD.transform)
+        {
+            rb.linearVelocity = new Vector2(speed, 0);
+        }
+        if (currPoint == pointC.transform)
+        {
+
+            rb.linearVelocity = new Vector2(-speed, 0);
+        }
+        if (laserOccur == true)
+        {
+            rb.linearVelocity = new Vector2(0, 0);
+            
+            
+
+        }
+       
     }
 }

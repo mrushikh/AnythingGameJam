@@ -8,10 +8,13 @@ public class shooting : MonoBehaviour
     private Camera mainCam;
     private Vector3 mousePos;
     public GameObject bullet;
+    public GameObject player;
+    public SpriteRenderer gun;
     public Transform bulletTransform;
     public bool canFire;
     private float timer;
     public float timeBWFiring;
+    private bool gunLeft;
 
     // FMOD emitter reference
     public StudioEventEmitter gunshotEmitter;
@@ -21,6 +24,7 @@ public class shooting : MonoBehaviour
     {
         gunshotEmitter = GetComponent<StudioEventEmitter>(); // Telling Unity to talk to FMOD Studio Event Emitter component
         mainCam=GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        gunLeft=false;
     }
 
     // Update is called once per frame
@@ -53,6 +57,16 @@ public class shooting : MonoBehaviour
             }
         }
 
-        
+        if (bulletTransform.transform.position.x<player.transform.position.x&&gunLeft==false)
+        {
+            gun.flipY = !gun.flipY;
+            gunLeft = true;
+        }
+        if (bulletTransform.transform.position.x > player.transform.position.x && gunLeft == true)
+        {
+            gun.flipY = !gun.flipY;
+            gunLeft = false;
+        }
+
     }
 }

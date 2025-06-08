@@ -35,17 +35,18 @@ public class moveAndShoot : MonoBehaviour
     //enemySpawn
     public GameObject enemySpawner;
     
-    private float timeCount1 = 3;
+    private float timeCount1 = 0;
     //spiderSpawn
     public GameObject enemySpawner2;
     public GameObject enemySpawner3;
     //slider
     public Slider Slider1;
     private int maxVal1;
-    private float timeCount2 = 3;
+    private float timeCount2 = 0;
     //laserMouth
     public GameObject laserMouth;
-    private float timeCount3=10;
+    public GameObject laserMouth1;
+    private float timeCount3=0;
     //animator
     Animator animator;
     void Start()
@@ -56,10 +57,7 @@ public class moveAndShoot : MonoBehaviour
         animator = GetComponent<Animator>();
 
     }
-    public void loseScreen()
-    {
-        SceneManager.LoadScene(2);
-    }
+   
     public void healthbar1(float currentValue, float maxValue)
     {
         if (healthInt == 0)
@@ -74,10 +72,20 @@ public class moveAndShoot : MonoBehaviour
             float[] spot = { -12.8f, -7.2f, 0, 7.2f, 12.6f };
             int space=Random.Range(0,5);
             float spawnX=spot[space];
-            Vector2 spaw=new Vector2(spawnX,12);
+            Vector2 spaw=new Vector2(spawnX,20);
             Instantiate(enemySpawner,spaw,Quaternion.identity);
             
         
+    }
+    public void spawnEnem1()
+    {
+        float[] spot = { -7.2f, 0, 7.2f };
+        int space = Random.Range(0, 5);
+        float spawnX = spot[space];
+        Vector2 spaw = new Vector2(spawnX, 20);
+        Instantiate(enemySpawner, spaw, Quaternion.identity);
+
+
     }
 
     public void spawnEnem2()
@@ -85,11 +93,11 @@ public class moveAndShoot : MonoBehaviour
         int pick=Random.Range(0,2);
         if (pick == 0)
         {
-            Instantiate(enemySpawner2, new Vector2(-17,13), Quaternion.identity);
+            Instantiate(enemySpawner2, new Vector2(-17,20), Quaternion.identity);
         }
         if (pick == 1)
         {
-            Instantiate(enemySpawner3, new Vector2(17, 13), Quaternion.identity);
+            Instantiate(enemySpawner3, new Vector2(17, 20), Quaternion.identity);
         }
 
     }
@@ -100,6 +108,13 @@ public class moveAndShoot : MonoBehaviour
         Instantiate(laserMouth,new Vector2(0, 0), Quaternion.identity);
         
         
+    }
+    public IEnumerator spawnLazerMouth1()
+    {
+        Instantiate(laserMouth1, new Vector2(0, 4), Quaternion.identity);
+        yield return new WaitForSeconds(1);
+        spawnLazerMouth();
+
     }
     public IEnumerator falltimer()
     {   
@@ -119,46 +134,57 @@ public class moveAndShoot : MonoBehaviour
 
     void Update()
     {
-        
+        Debug.Log(healthInt);
+        if(rb.position.y < -9)
+        {
+            healthInt = 0;
+        }
+        if (healthInt < 1)
+        {
+            SceneManager.LoadScene(2);
+        }
         //slider
         healthbar1(healthInt, maxVal1);
 
         //spawning enemy
         timeCount1 -= Time.deltaTime;
         timeCount2 -= Time.deltaTime;
-        timeCount3 -= Time.deltaTime;
+        if (bossScript.phase > 1)
+        {
+            timeCount3 -= Time.deltaTime;
+        }
         if (timeCount1 < 0) {
             if (bossScript.phase==3)
             {
-                timeCount1 = 1;
-                Debug.Log("a");
+                timeCount1 = 0.7f;
+                spawnEnem1();
                 
             }
             else if (bossScript.phase!=3)
             {
 
-                timeCount1 = 5;
+                timeCount1 = 2f;
+                spawnEnem();
             }
             
-            spawnEnem();
+            
             
         }
 
         
         if (timeCount2 < 0&&bossScript.spider==true)
         {
-            timeCount2 = 2;
+            timeCount2 = 1.5f;
             spawnEnem2();
             
        
         }
        
-        if (timeCount3 < 0&&bossScript.phase>1)
+        if (timeCount3 < 3&&bossScript.phase>1)
         {
-            timeCount3 = 20;
-            spawnLazerMouth();
-
-
+            timeCount3 = 15;
+            StartCoroutine(spawnLazerMouth1());
+            
         }
         //fliping
         moveX = Input.GetAxisRaw("Horizontal");
@@ -229,7 +255,7 @@ public class moveAndShoot : MonoBehaviour
         }
 
         //check if onplatform
-        if (other.CompareTag("platform"))
+        if (other.CompareTag("platform")||other.CompareTag("Finish"))
         {   
             onPlatform = true;
 

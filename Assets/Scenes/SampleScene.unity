@@ -410,7 +410,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1467005748}
     m_Modifications:
     - target: {fileID: 216236381331876104, guid: 7cc92e11f24844e42831685bc636d99c, type: 3}
       propertyPath: m_Name
@@ -422,11 +422,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7257319192532632096, guid: 7cc92e11f24844e42831685bc636d99c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.029999971
+      value: -1.70877
       objectReference: {fileID: 0}
     - target: {fileID: 7257319192532632096, guid: 7cc92e11f24844e42831685bc636d99c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.28
+      value: 2.36684
       objectReference: {fileID: 0}
     - target: {fileID: 7257319192532632096, guid: 7cc92e11f24844e42831685bc636d99c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -607,6 +607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 8905477669657793676, guid: 6063c566498b78d46aedd4e2e46cf045, type: 3}
+  player: {fileID: 2125904691}
+  gun: {fileID: 2071583436}
   bulletTransform: {fileID: 2071583435}
   canFire: 1
   timeBWFiring: 0.5
@@ -1051,6 +1053,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef96ad7bf9dbe14fa6fba6fb4107f0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &525396333 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7257319192532632096, guid: 7cc92e11f24844e42831685bc636d99c, type: 3}
+  m_PrefabInstance: {fileID: 190105412}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &537465129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,7 +1090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6776bcaa2f91d54cbb6f7fc377e8308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
+  health: 300
   Slider2: {fileID: 466021220}
   bossDamagedEmitter: {fileID: 537465135}
 --- !u!4 &537465132
@@ -1879,6 +1886,7 @@ Transform:
   - {fileID: 2038605305}
   - {fileID: 1099122915}
   - {fileID: 191591434}
+  - {fileID: 525396333}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1474381610
@@ -2507,6 +2515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform
       objectReference: {fileID: 0}
+    - target: {fileID: 216236381331876104, guid: 7cc92e11f24844e42831685bc636d99c, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 7257319192532632096, guid: 7cc92e11f24844e42831685bc636d99c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14.52
@@ -2670,8 +2682,8 @@ Transform:
   m_GameObject: {fileID: 2071583434}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.01, y: -0.007999994, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalPosition: {x: 1.73, y: 0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 355605352}
@@ -2720,8 +2732,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.08343716, g: 0.7075472, b: 0.18464011, a: 1}
+  m_Sprite: {fileID: 5173121111588627981, guid: c1a5a2ea2c239214d8c6e817d112bacc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3052,12 +3064,13 @@ MonoBehaviour:
   jumpEmitter: {fileID: 2125904698}
   fallEmitter: {fileID: 2125904699}
   PlayerDamagedEmitter: {fileID: 2125904701}
-  healthInt: 100
+  healthInt: 50
   enemySpawner: {fileID: 2022581295595901580, guid: 39168f9f0a51ea648a4120e458a71494, type: 3}
   enemySpawner2: {fileID: 8252577709129987975, guid: c873a9b2dac937541b31196a9a59c382, type: 3}
   enemySpawner3: {fileID: 4137323330375159275, guid: d53f54d536348eb44b5425580361464d, type: 3}
   Slider1: {fileID: 1700237354}
   laserMouth: {fileID: 3293015801153813984, guid: da7d4b131ceeefe49a09168162b4cdb4, type: 3}
+  laserMouth1: {fileID: 2781729454631617728, guid: f413f7f55510cb549b877da068621a74, type: 3}
 --- !u!61 &2125904697
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3231,6 +3244,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform
       objectReference: {fileID: 0}
+    - target: {fileID: 216236381331876104, guid: 7cc92e11f24844e42831685bc636d99c, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     - target: {fileID: 7257319192532632096, guid: 7cc92e11f24844e42831685bc636d99c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.97
@@ -3284,7 +3301,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 619394802}
   - {fileID: 2125904693}
-  - {fileID: 190105412}
   - {fileID: 1292676860}
   - {fileID: 1467005748}
   - {fileID: 537465132}

@@ -18,16 +18,21 @@ public class spawnEnemy : MonoBehaviour
 }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("platform")) {
+        if (collision.CompareTag("platform")|| collision.CompareTag("Finish"))
+        {
             Destroy(gameObject);
-            if (spawned==false) {
+            if (spawned == false)
+            {
                 Instantiate(enemy, new Vector2(transform.position.x, transform.position.y + 0.01f), Quaternion.identity);
-                spawned=true;
+                spawned = true;
             }
-            
-        }
-        
 
-    }
-   
+        }
+        if (collision.CompareTag("Player"))
+        {
+            if (gameObject!=null) {
+                Destroy(gameObject);
+            }
+        }
+    }   
 }

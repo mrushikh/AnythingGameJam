@@ -23,6 +23,7 @@ public class enemyPatrol : MonoBehaviour
     public GameObject parent1;
     private bool active;
 
+    private bool notFirst;
     public IEnumerator spawnLaser()
     {
 
@@ -125,7 +126,13 @@ public class enemyPatrol : MonoBehaviour
 
         }
 
-
+        if (bossScript.phase==3&&notFirst==false)
+        {   
+            notFirst = true;
+            if (rb.transform.position.x>10|| rb.transform.position.x < -10) { 
+                Destroy(gameObject);
+            }
+        }
 
 
 
@@ -146,7 +153,7 @@ public class enemyPatrol : MonoBehaviour
 
             if (rand < 3||laserHap==true)
             {
-                StartCoroutine(letPass1(1));
+                StartCoroutine(letPass1(0.5f));
             }
             else
             {
@@ -162,13 +169,13 @@ public class enemyPatrol : MonoBehaviour
             
             if (collision.gameObject != null)
             {
-                Destroy(collision.gameObject);
+                StartCoroutine(letPass1(0.2f));
             }
         }
 
         if (collision.CompareTag("Player"))
         {
-            StartCoroutine(letPass1(1));
+            StartCoroutine(letPass1(0.3f));
         }
 
 

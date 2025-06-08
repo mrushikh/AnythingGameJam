@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8518818230283153799}
   - component: {fileID: 6226816599347203757}
   - component: {fileID: 896627137443846049}
+  - component: {fileID: 329014090432878597}
   m_Layer: 0
   m_Name: Square (1)
   m_TagString: SpiderEnemy
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3598046311717057875}
@@ -79,9 +80,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.048236314, b: 0.6509434, a: 1}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 8452824215773846641, guid: 8f81cd6b2bb2e184982100a5192b7b04, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -106,7 +107,7 @@ MonoBehaviour:
   pointC: {fileID: 7717301956392014268}
   pointD: {fileID: 7156278362360789286}
   speed: 3
-  laser2: {fileID: 6907972379834734373, guid: d32c6c236fd30ed418fc509e0e59f919, type: 3}
+  laser2: {fileID: 5702805542174032594, guid: 40110b8ab4ea0254daa06b9989dafb91, type: 3}
   statPoint: {fileID: 3598046311717057875}
   health: 10
   parent: {fileID: 5690153570257417681}
@@ -171,18 +172,40 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0000010728836, y: -0.07536149}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 5.7, y: 3.53}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.672455, y: 3.5120788}
   m_EdgeRadius: 0
+--- !u!95 &329014090432878597
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4610698644476585070}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd6c012511fb78a4a923304f9fd34169, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5690153570257417681
 GameObject:
   m_ObjectHideFlags: 0

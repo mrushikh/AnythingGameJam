@@ -1,68 +1,27 @@
 [LOG] System::create                           : Header version = 2.02.28. Current version = 2.02.28.
-[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0x0.
+[LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20228 (150745), maxchannels=256, flags=0x00020000
-[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD Core Audio Output'
-[LOG] OutputCoreAudio::init                    : Output running 2 channels at 48000Hz sample rate.
-[LOG] OutputCoreAudio::init                    : Maximum hardware read size: 512 samples, Software buffer size: 512 samples, Number of software buffers: 4.
+[LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
+[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x132059808 isAsync 0 updatePeriod 0.02
+[LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
+[LOG] AsyncManager::init                       : manager 0000020435DB0068 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] PlaybackSystem::init                     : done
 [LOG] Thread::initThread                       : Init FMOD Studio bank load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
 [LOG] Manager::init                            : done.
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0x3a028a098, queue head = 0x3a01efc48, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x3a028a098
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x3a028a098
-[LOG] SoundI::release                          : Music – Phase 2 (0x3a0155398)
-[LOG] SoundI::release                          :     Music – Phase 2 (0x3a028a7b8)
-[LOG] SoundI::release                          :     Music – Phase 2 (0x3a028a948)
-[LOG] SoundI::release                          : Music – Phase 1 (0x3a01c54e8)
-[LOG] SoundI::release                          :     Music – Phase 1 (0x3a0289f08)
-[LOG] SoundI::release                          :     Music – Phase 1 (0x3a028a098)
-[LOG] SoundI::release                          : Music – Phase 3 (0x3a0157e18)
-[LOG] SoundI::release                          :     Music – Phase 3 (0x1232a84f8)
-[LOG] SoundI::release                          :     Music – Phase 3 (0x1232af308)
-[LOG] SoundI::release                          :  (0x3bc52b1d8)
-[LOG] SoundI::release                          :     Boss Heart Damaged 1 (0x3b565ae58)
-[LOG] SoundI::release                          :  (0x15309b4a8)
-[LOG] SoundI::release                          :     Boss Heart Damaged 2 (0x3b0794c48)
-[LOG] SoundI::release                          :  (0x3b0764808)
-[LOG] SoundI::release                          :     Boss Heart Damaged 3 (0x3b07529c8)
-[LOG] SoundI::release                          :  (0x3bc5ba788)
-[LOG] SoundI::release                          :     Boss Heart Damaged 4 (0x33513de08)
-[LOG] SoundI::release                          :  (0x3b0729788)
-[LOG] SoundI::release                          :     Boss Heart Damaged 5 (0x3b072caf8)
-[LOG] SoundI::release                          :  (0x3b072e808)
-[LOG] SoundI::release                          :     Boss Heart Damaged 6 (0x3b0790498)
-[LOG] SoundI::release                          :  (0x141d8bb48)
-[LOG] SoundI::release                          :     Player Gunshot 1 (0x141d8bcb8)
-[LOG] SoundI::release                          :  (0x141d8b578)
-[LOG] SoundI::release                          :     Player Gunshot 2 (0x141d8b6e8)
-[LOG] SoundI::release                          :  (0x141d891d8)
-[LOG] SoundI::release                          :     Player Gunshot 3 (0x141d89348)
-[LOG] SoundI::release                          :  (0x3329bb938)
-[LOG] SoundI::release                          :     Player Jump 1 (0x3329e8c48)
-[LOG] SoundI::release                          :  (0x3329b2458)
-[LOG] SoundI::release                          :     Player Jump 2 (0x3329d6da8)
-[LOG] SoundI::release                          :  (0x3329d3988)
-[LOG] SoundI::release                          :     Player Jump 3 (0x3329ee238)
-[LOG] SoundI::release                          :  (0x141e80f58)
-[LOG] SoundI::release                          :     Player Fall Through 1 (0x141ef4878)
-[LOG] SoundI::release                          :  (0x141ebe398)
-[LOG] SoundI::release                          :     Player Fall Through 2 (0x141e80b08)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -70,5 +29,3 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
-[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
-[LOG] Thread::callback                         : FMOD file thread finished.

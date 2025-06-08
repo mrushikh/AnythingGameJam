@@ -53,6 +53,17 @@ public class bossScript : MonoBehaviour
             Destroy(obj);
         }
     }
+    public IEnumerator destroyPlatform()
+    {
+        Debug.Log("shake");
+        yield return new WaitForSeconds(3);
+        
+        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag("Finish");
+        foreach (GameObject obj in objectsWithTag)
+        {
+            Destroy(obj);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -87,10 +98,11 @@ public class bossScript : MonoBehaviour
             phase = 3;
             spider = false;
             StartCoroutine(destroyGround());
+            StartCoroutine(destroyPlatform());
             
         }
         if (health < 0)
-        {
+        {   
             winScreen();
         }
     }

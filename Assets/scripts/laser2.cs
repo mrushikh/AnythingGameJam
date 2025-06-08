@@ -14,7 +14,7 @@ public class laser2 : MonoBehaviour
 
     }
     private void Start()
-    {
+    {   transform.Rotate(0, 0, 90);
         StartCoroutine(die1());
     }
 
