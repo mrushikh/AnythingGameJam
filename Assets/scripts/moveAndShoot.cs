@@ -49,6 +49,7 @@ public class moveAndShoot : MonoBehaviour
     private float timeCount3=0;
     //animator
     Animator animator;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();

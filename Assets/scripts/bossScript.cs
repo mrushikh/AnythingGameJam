@@ -14,6 +14,10 @@ public class bossScript : MonoBehaviour
     public static bool spider;
     public static int phase;
     public StudioEventEmitter bossDamagedEmitter;
+    //anim
+    public Animator ground;
+    public Animator plat1;
+    public Animator plat5;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -44,6 +48,9 @@ public class bossScript : MonoBehaviour
     }
 
     public IEnumerator destroyGround() {
+        ground.SetFloat("shakedd",5);
+        plat1.SetFloat("platSS", 5);
+        plat5.SetFloat("platS",5);
         Debug.Log("shake");
         yield return new WaitForSeconds(3);
         Destroy(GameObject.FindWithTag("ground"));
