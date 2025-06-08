@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{8b302ac2-139e-4a06-8f3b-b2cf547b2ba5}">
+		<property name="name">
+			<value>BossLaserIsFiring</value>
+		</property>
+		<relationship name="folder">
+			<destination>{844f0a42-a4c8-4f9e-b945-56e029573f99}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{f6381592-6d6e-478b-aa2d-165dac1569b8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{f6381592-6d6e-478b-aa2d-165dac1569b8}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

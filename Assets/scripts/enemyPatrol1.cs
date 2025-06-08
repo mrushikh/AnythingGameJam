@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class enemyPatrol1 : MonoBehaviour
 {   //patrol1
@@ -112,7 +114,7 @@ public class enemyPatrol1 : MonoBehaviour
         }
         if (health < 1)
         {
-
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemy/SpiderBotKilled");
             Destroy(pointC);
             Destroy(pointD);
             Destroy(gameObject);
@@ -127,6 +129,11 @@ public class enemyPatrol1 : MonoBehaviour
         {
             Destroy(collision.gameObject);
             health = health - 5;
+
+            if (health > 1)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemy/SpiderBotDamaged");
+                }
         }
        
         if (collision.CompareTag("SpiderEnemy"))

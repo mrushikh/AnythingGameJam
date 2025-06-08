@@ -1,6 +1,8 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using FMODUnity;
+using FMOD.Studio;
 
 public class enemyPatrol : MonoBehaviour
 {   //takes double damage
@@ -124,8 +126,13 @@ public class enemyPatrol : MonoBehaviour
         //death
         if (health < 1)
         {
+<<<<<<< Updated upstream
 
             Dest2();
+=======
+            FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemy/EyeBotKilled");
+            Destroy(gameObject);
+>>>>>>> Stashed changes
 
         }
         
@@ -140,6 +147,11 @@ public class enemyPatrol : MonoBehaviour
         {
             Destroy(collision.gameObject);
             health = health - 5;
+            
+            if (health > 1)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Enemy/EyeBotDamaged");
+                }
         }
         if (collision.CompareTag("EnemyEye"))
         {

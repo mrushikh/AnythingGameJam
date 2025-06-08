@@ -13,6 +13,12 @@ GameObject:
   - component: {fileID: 2248313652088375792}
   - component: {fileID: 3791306416947289155}
   - component: {fileID: 6563929719675809238}
+<<<<<<< Updated upstream:Assets/material/SpawnEyes.prefab
+=======
+  - component: {fileID: 3160552762761985697}
+  - component: {fileID: 319570385675980614}
+  - component: {fileID: 237469482029893321}
+>>>>>>> Stashed changes:Assets/final assets/SpawnEyes.prefab
   m_Layer: 0
   m_Name: SpawnEyes
   m_TagString: SpawnEye
@@ -102,9 +108,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844ee9e3296900445b86e211e47c4a33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream:Assets/material/SpawnEyes.prefab
   enemy: {fileID: 7200493342834518733, guid: c16864b7d43b65d40a04d7f40cd07420, type: 3}
 --- !u!61 &3791306416947289155
 BoxCollider2D:
+=======
+  enemy: {fileID: 4456447133522119093, guid: 61e8211719e7e9848be321fc31284b81, type: 3}
+  EyebotSpawnEmitter: {fileID: 237469482029893321}
+--- !u!50 &6563929719675809238
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022581295595901580}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!58 &3160552762761985697
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022581295595901580}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2.635
+--- !u!58 &319570385675980614
+CircleCollider2D:
+>>>>>>> Stashed changes:Assets/final assets/SpawnEyes.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -138,6 +214,7 @@ BoxCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
+<<<<<<< Updated upstream:Assets/material/SpawnEyes.prefab
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -152,11 +229,17 @@ BoxCollider2D:
 --- !u!50 &6563929719675809238
 Rigidbody2D:
   serializedVersion: 5
+=======
+  m_Radius: 2.635
+--- !u!114 &237469482029893321
+MonoBehaviour:
+>>>>>>> Stashed changes:Assets/final assets/SpawnEyes.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022581295595901580}
+<<<<<<< Updated upstream:Assets/material/SpawnEyes.prefab
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -176,3 +259,29 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+=======
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1011065833
+      Data2: 1168363630
+      Data3: 83444148
+      Data4: -1637462954
+    Path: event:/SFX/Enemy/EyeBotSpawn
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+>>>>>>> Stashed changes:Assets/final assets/SpawnEyes.prefab

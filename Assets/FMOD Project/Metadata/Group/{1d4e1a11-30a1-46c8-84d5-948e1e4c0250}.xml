@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{1d4e1a11-30a1-46c8-84d5-948e1e4c0250}">
+		<property name="volume">
+			<value>-8</value>
+		</property>
+		<property name="name">
+			<value>MusicBus</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{002cb021-851b-4b12-99e7-7216679bcfc6}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{cbd8f2e0-3719-41b7-b456-cca169a4bd95}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{c1559339-6996-42c3-8487-d0638662888a}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{002cb021-851b-4b12-99e7-7216679bcfc6}">
+		<relationship name="effects">
+			<destination>{67627754-9d2d-4fde-b701-a4f78b267552}</destination>
+			<destination>{c8c63a9f-7ea6-4a0b-96da-2860c34447ef}</destination>
+			<destination>{51ef8bef-f9f5-4ca4-9107-a453f2b09d5b}</destination>
+			<destination>{696af5b5-1c09-41e3-8549-800246858e44}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{cbd8f2e0-3719-41b7-b456-cca169a4bd95}" />
+	<object class="CompressorEffect" id="{67627754-9d2d-4fde-b701-a4f78b267552}">
+		<property name="threshold">
+			<value>-5</value>
+		</property>
+		<property name="gain">
+			<value>-2</value>
+		</property>
+	</object>
+	<object class="MixerBusFader" id="{c8c63a9f-7ea6-4a0b-96da-2860c34447ef}" />
+	<object class="CompressorEffect" id="{51ef8bef-f9f5-4ca4-9107-a453f2b09d5b}">
+		<property name="threshold">
+			<value>-30</value>
+		</property>
+		<property name="ratio">
+			<value>4.5</value>
+		</property>
+		<property name="attackTime">
+			<value>8.19999981</value>
+		</property>
+		<property name="releaseTime">
+			<value>720</value>
+		</property>
+		<relationship name="sidechains">
+			<destination>{8cc96f3a-ab64-46eb-8e16-3adbf006d67c}</destination>
+		</relationship>
+	</object>
+	<object class="Sidechain" id="{696af5b5-1c09-41e3-8549-800246858e44}" />
+</objects>
