@@ -6,7 +6,7 @@
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 512 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x32449c008 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x362ed3a08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,6 +18,69 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
+[LOG] SoundI::release                          : Music – Phase 2 (0x11f624188)
+[LOG] SoundI::release                          :     Music – Phase 2 (0x1698963f8)
+[LOG] SoundI::release                          :     Music – Phase 2 (0x362140268)
+[LOG] SoundI::release                          : Music – Phase 1 (0x11f671ae8)
+[LOG] SoundI::release                          :     Music – Phase 1 (0x1698a5718)
+[LOG] SoundI::release                          :     Music – Phase 1 (0x362153ad8)
+[LOG] SoundI::release                          : Music – Phase 3 (0x11f67e6a8)
+[LOG] SoundI::release                          :     Music – Phase 3 (0x1698c30f8)
+[LOG] SoundI::release                          :     Music – Phase 3 (0x15357c858)
+[LOG] SoundI::release                          :  (0x39ad9a148)
+[LOG] SoundI::release                          :     Eyebot Damaged (0x39ad08e98)
+[LOG] SoundI::release                          :  (0x169893ae8)
+[LOG] SoundI::release                          :     Player Damaged 1 (0x1698f77f8)
+[LOG] SoundI::release                          :  (0x1698add68)
+[LOG] SoundI::release                          :     Player Damaged 2 (0x1698cfcf8)
+[LOG] SoundI::release                          :  (0x1698c4158)
+[LOG] SoundI::release                          :     Spiderbot Spawn (0x1698f9ee8)
+[LOG] SoundI::release                          :  (0x15415cd68)
+[LOG] SoundI::release                          :     Eyebot Spawn (0x39add37d8)
+[LOG] SoundI::release                          :  (0x398b230b8)
+[LOG] SoundI::release                          :     Boss Heart Damaged 1 (0x398b23228)
+[LOG] SoundI::release                          :  (0x398b213a8)
+[LOG] SoundI::release                          :     Boss Heart Damaged 2 (0x398b22648)
+[LOG] SoundI::release                          :  (0x398b24228)
+[LOG] SoundI::release                          :     Boss Heart Damaged 3 (0x398b24398)
+[LOG] SoundI::release                          :  (0x398b22aa8)
+[LOG] SoundI::release                          :     Boss Heart Damaged 4 (0x398b22c18)
+[LOG] SoundI::release                          :  (0x398b23688)
+[LOG] SoundI::release                          :     Boss Heart Damaged 5 (0x398b237f8)
+[LOG] SoundI::release                          :  (0x398b23c58)
+[LOG] SoundI::release                          :     Boss Heart Damaged 6 (0x398b23dc8)
+[LOG] SoundI::release                          :  (0x16977bd38)
+[LOG] SoundI::release                          :     Player Jump 1 (0x39f678d28)
+[LOG] SoundI::release                          :  (0x1697b1338)
+[LOG] SoundI::release                          :     Player Jump 2 (0x39f6fbbe8)
+[LOG] SoundI::release                          :  (0x1697e4b68)
+[LOG] SoundI::release                          :     Player Jump 3 (0x39f65c9e8)
+[LOG] SoundI::release                          :  (0x39af54e28)
+[LOG] SoundI::release                          :     Player Gunshot 1 (0x3621c8088)
+[LOG] SoundI::release                          :  (0x36214b708)
+[LOG] SoundI::release                          :     Player Gunshot 2 (0x320e5b438)
+[LOG] SoundI::release                          :  (0x1698e3c78)
+[LOG] SoundI::release                          :     Player Gunshot 3 (0x3448a2db8)
+[LOG] SoundI::release                          :  (0x154155ac8)
+[LOG] SoundI::release                          :     Eyebot Laser (0x33663af98)
+[LOG] SoundI::release                          :  (0x169738158)
+[LOG] SoundI::release                          :     Boss Laser (0x39f6cfd08)
+[LOG] SoundI::release                          :  (0x336634028)
+[LOG] SoundI::release                          :     Spiderbot Laser (0x39ad0af38)
+[LOG] SoundI::release                          :  (0x39ad0e288)
+[LOG] SoundI::release                          :     Player Fall Through 1 (0x1541faeb8)
+[LOG] SoundI::release                          :  (0x39ad45938)
+[LOG] SoundI::release                          :     Player Fall Through 2 (0x3ac5b5108)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
@@ -25,3 +88,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

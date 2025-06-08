@@ -127,20 +127,23 @@
 	</object>
 	<object class="MixerBusFader" id="{a4495e04-f0da-47b8-bb80-45ed9c0c42b5}" />
 	<object class="ThreeEQEffect" id="{b7a29a96-2e66-408a-b5e1-d4a5adc7af95}">
-		<property name="lowGain">
-			<value>-2</value>
-		</property>
 		<property name="midGain">
 			<value>1</value>
+		</property>
+		<property name="highGain">
+			<value>1.5</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{70b46e8d-3a30-4a54-9c45-1a95b53e777b}" />
 	<object class="CompressorEffect" id="{877a5e3f-ae3f-4e3f-8b86-4d5f3d29592d}">
 		<property name="threshold">
-			<value>-27.5</value>
+			<value>-25</value>
 		</property>
 		<property name="attackTime">
 			<value>6.80000019</value>
+		</property>
+		<property name="gain">
+			<value>3</value>
 		</property>
 	</object>
 	<object class="SFXReverbEffect" id="{3fc8998c-42f0-4996-aca0-1c82d16f03a6}">
