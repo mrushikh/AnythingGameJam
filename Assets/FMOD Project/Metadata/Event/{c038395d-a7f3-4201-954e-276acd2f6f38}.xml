@@ -184,13 +184,10 @@
 	</object>
 	<object class="CompressorEffect" id="{110a8956-3a88-45e8-93a0-47a631e1e199}">
 		<property name="threshold">
-			<value>-18</value>
+			<value>-21</value>
 		</property>
 		<property name="attackTime">
 			<value>3</value>
-		</property>
-		<property name="gain">
-			<value>1.5</value>
 		</property>
 	</object>
 	<object class="RandomizerModulator" id="{7072a91d-4a93-445d-ab62-ef8c1aed42f4}">

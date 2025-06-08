@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="MixerGroup" id="{1d4e1a11-30a1-46c8-84d5-948e1e4c0250}">
 		<property name="volume">
-			<value>-8</value>
+			<value>-8.5</value>
 		</property>
 		<property name="name">
 			<value>MusicBus</value>
@@ -28,7 +28,7 @@
 	<object class="MixerBusPanner" id="{cbd8f2e0-3719-41b7-b456-cca169a4bd95}" />
 	<object class="CompressorEffect" id="{67627754-9d2d-4fde-b701-a4f78b267552}">
 		<property name="threshold">
-			<value>-5</value>
+			<value>-4</value>
 		</property>
 		<property name="gain">
 			<value>-2</value>
@@ -47,6 +47,9 @@
 		</property>
 		<property name="releaseTime">
 			<value>720</value>
+		</property>
+		<property name="gain">
+			<value>1</value>
 		</property>
 		<relationship name="sidechains">
 			<destination>{8cc96f3a-ab64-46eb-8e16-3adbf006d67c}</destination>
