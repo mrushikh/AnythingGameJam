@@ -80,7 +80,7 @@ public class moveAndShoot : MonoBehaviour
     public void spawnEnem1()
     {
         float[] spot = { -7.2f, 0, 7.2f };
-        int space = Random.Range(0, 5);
+        int space = Random.Range(0, 3);
         float spawnX = spot[space];
         Vector2 spaw = new Vector2(spawnX, 20);
         Instantiate(enemySpawner, spaw, Quaternion.identity);
