@@ -10,9 +10,6 @@
 		<property name="sampleRateMode">
 			<value>1</value>
 		</property>
-		<property name="loadingMode">
-			<value>2</value>
-		</property>
 		<relationship name="platform">
 			<destination>{cdcb6b5d-02a9-48bc-9a2d-71fc4fdb49dc}</destination>
 		</relationship>
